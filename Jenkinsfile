@@ -10,5 +10,5 @@ properties([
 mavenJavaLibraryTemplate (
     githubOrganization: 'soa-platform',
     mvnArgs: '',
-    deployPredicate: { -> (githubOrganization == null || githubOrganization == getJobName().org) && (env.BRANCH_NAME == 'master' || env.BRANCH_NAME.contains('-build') }
+    deployPredicate: { -> (githubOrganization == null || githubOrganization == getJobName().org) && (env.BRANCH_NAME == 'master' || env.BRANCH_NAME.contains('-build')) }
 )
